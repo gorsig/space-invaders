@@ -36,6 +36,12 @@ def main():
         screen.fill((0, 0, 0))
 
         player_x += player_x_change
+
+        if player_x <= 0:
+            player_x = 0
+        elif player_x >= 736:
+            player_x = 736
+
         player(player_x, player_y)
         pygame.display.update()
 
